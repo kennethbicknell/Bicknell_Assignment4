@@ -39,9 +39,8 @@ public class DuplicateRemover {
     }
 
     public void write(String dataFile){
-        remove(dataFile);
         
-        File data = new File("output1.txt");
+        File data = new File(dataFile);
 
         try(Formatter output = new Formatter(data)){
 
@@ -51,11 +50,11 @@ public class DuplicateRemover {
 
         }catch (FileNotFoundException e){
 
-            System.err.printf("There was an error when opening \"output1\".txt for write.");
+            System.err.printf("There was an error when opening \"%s\".txt for write.", dataFile);
 
         }catch (SecurityException e){
 
-            System.err.printf("You dont have permission to access \"output1.txt\".\n");
+            System.err.printf("You dont have permission to access \"%s\".\n", dataFile);
 
         }catch (IOException e){
 
