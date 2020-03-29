@@ -51,7 +51,7 @@ public class DuplicateCounter{
 
             for (String word : wordCounter.keySet()){
                 int amount = wordCounter.get(word);
-                output.format("%s: %d", word, amount);
+                output.format("%s: %d\n", word, amount);
             }
 
         }catch (FileNotFoundException e){
